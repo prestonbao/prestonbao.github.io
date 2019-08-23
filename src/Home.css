@@ -1,0 +1,13 @@
+body {
+  font-family: 'Abel', 'sans-serif';
+  width: 95%;
+  height: 76vh;
+  border:0;
+  background-image: url('img/Topo2.svg');
+  background-repeat: no-repeat;
+  background-size: contain;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  background-size: cover;
+  -o-background-size: cover;
+}
