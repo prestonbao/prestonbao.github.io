@@ -5,19 +5,19 @@ import { faArrowCircleLeft } from '@fortawesome/free-solid-svg-icons';
 function returnMenu() {
   document.getElementById("menu").style.display = "flex";
   document.getElementById("header").style.display = "block";
-  document.getElementById("about").style.display = "none";
+  document.getElementById("experience").style.display = "none";
   document.querySelector('body').classList.remove('content');
 }
 
-class About extends React.Component {
+class Experience extends React.Component {
   render() {
     return (
-      <div id="about" style={{display: 'none'}} className="container">
-        <h1 className="mt-5">ABOUT</h1>
+      <div id="experience" style={{display: 'none'}} className="container">
+        <h1 className="mt-5">Experience</h1>
         <h4>CS Student @ UT Austin.</h4>
         <span onClick={returnMenu}><FontAwesomeIcon style={{cursor: 'pointer'}} icon={faArrowCircleLeft} size='3x'/></span>
       </div>
     )
   }
 }
-export default About;
+export default Experience;
