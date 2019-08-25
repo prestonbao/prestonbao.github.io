@@ -1,12 +1,13 @@
 import React from 'react';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faArrowCircleLeft } from '@fortawesome/free-solid-svg-icons';
+import '../css/About.css';
 
 function returnMenu() {
   document.getElementById("menu").style.display = "flex";
   document.getElementById("header").style.display = "block";
   document.getElementById("about").style.display = "none";
-  document.querySelector('body').classList.remove('content');
+  document.getElementById('main').classList.remove('content');
 }
 
 class About extends React.Component {

@@ -1,38 +1,47 @@
 import React from 'react';
 import '../css/Menu.css';
 
-function clearMenu() {
-  document.getElementById("menu").style.display = "none";
-  document.getElementById("header").style.display = "none"
-}
-
-function displayContent() {
-  document.body.classList.add("content");
-}
-
-function displayAbout(){
-  clearMenu();
-  displayContent();
-  document.getElementById("about").style.display = "block";
-
-}
-
-function displayExperience(){
-  clearMenu();
-  displayContent();
-  document.getElementById("experience").style.display = "block";
-}
-
 class Menu extends React.Component {
+
+  constructor(props) {
+    super(props);
+    this.clearMenu = this.clearMenu.bind(this);
+    this.displayContent = this.displayContent.bind(this);
+    this.mouseEnter = this.mouseEnter.bind(this);
+    this.mouseLeave = this.mouseLeave.bind(this);
+  }
+
+  mouseEnter(id) {
+    document.getElementById('main').classList.add(id + '-hover');
+  }
+
+  mouseLeave(id) {
+    document.getElementById('main').classList.remove(id + '-hover');
+  }
+
+  clearMenu() {
+    document.getElementById("menu").style.display = "none";
+    document.getElementById("header").style.display = "none"
+  }
+
+  displayContent(id) {
+    this.clearMenu();
+    document.getElementById("main").classList.add("content");
+    document.getElementById(id).style.display = "block";
+  }
 
   render() {
     return (
       <div className="container">
       <nav className="menu" id="menu">
-        <a href="#" onClick={displayAbout} className="menu-item" id="about-nav">About</a>
-        <a href="#" onClick={displayExperience} className="menu-item" id="experience-nav">Experience</a>
-        <a href="#" className="menu-item" id="projects-nav">Projects</a>
-        <a href="#" className="menu-item" id="contact-nav">Contact</a>
+        <span onMouseLeave={() => this.mouseLeave('about')} onMouseEnter={() => this.mouseEnter('about')}
+         onClick={() => this.displayContent("about")} className="menu-item" id="about-nav">About</span>
+        <span onMouseLeave={() => this.mouseLeave('experience')} onMouseEnter={() => this.mouseEnter('experience')}
+        onClick={() => this.displayContent("experience")} className="menu-item" id="experience-nav">Experience</span>
+        <span onMouseLeave={() => this.mouseLeave('projects')} onMouseEnter={() => this.mouseEnter('projects')}
+        onClick={() => this.displayContent("projects")} className="menu-item" id="projects-nav">Projects</span>
+        <span onMouseLeave={() => this.mouseLeave('contact')} onMouseEnter={() => this.mouseEnter('contact')}
+        onClick={() => this.displayContent("contact")} className="menu-item" id="contact-nav">Contact</span>
       </nav>
       </div>
     )

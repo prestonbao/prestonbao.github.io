@@ -1,12 +1,12 @@
-body {
+.main {
   color: white;
   font-family: 'Abel', 'sans-serif';
-  width: 95%;
-  height: 76vh;
+  width: 100%;
+  height: 100vh;
   border:0;
-  background-image: url('/img/Topo2.svg');
+  overflow: hidden;
+  background-image: url('/img/Topo.svg');
   background-repeat: no-repeat;
-  background-size: contain;
   -webkit-background-size: cover;
   -moz-background-size: cover;
   background-size: cover;
@@ -15,4 +15,40 @@ body {
 
 .content {
   background: black;
+}
+
+.about-hover {
+  background-image: url('/img/TopoRed.svg');
+  background-repeat: no-repeat;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  background-size: cover;
+  -o-background-size: cover;
+}
+
+.experience-hover {
+  background-image: url('/img/TopoGreen.svg');
+  background-repeat: no-repeat;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  background-size: cover;
+  -o-background-size: cover;
+}
+
+.projects-hover {
+  background-image: url('/img/TopoPurple.svg');
+  background-repeat: no-repeat;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  background-size: cover;
+  -o-background-size: cover;
+}
+
+.contact-hover {
+  background-image: url('/img/TopoYellow.svg');
+  background-repeat: no-repeat;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  background-size: cover;
+  -o-background-size: cover;
 }
